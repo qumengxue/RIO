@@ -25,6 +25,7 @@ The annotation contains:
 
 ## Baseline Methods
 The baselines in the paper include the following, please refer to the corresponding repositories.
+
 [MDETR: Modulated Detection for End-to-End Multi-Modal Understanding](https://github.com/ashkamath/mdetr)
 
 [TOIST: Task Oriented Instance Segmentation Transformer with Noun-Pronoun Distillation](https://github.com/AIR-DISCOVER/TOIST)
