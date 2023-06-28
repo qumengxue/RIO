@@ -10,6 +10,8 @@ Here is a ground truth example from the dataset:
 
 The intention description is "you can use the thing to cut the food on the table".
 
+More examples are in the file ./examples.
+
 ## Data Format
 The annotation contains: 
 
