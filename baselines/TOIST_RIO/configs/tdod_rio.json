@@ -1,0 +1,11 @@
+{
+    "combine_datasets": ["tdod"],
+    "combine_datasets_val": ["tdod"],
+    "refexp_dataset_name": "tdod",
+    "coco_path": "data/images",
+    "refexp_ann_path": "data/coco-tasks/annotations/",
+    "refexp_test_set": "common", 
+    "catid2name_path": "data/id2name.json",
+    "epochs": 30,
+    "lr_drop": 10
+}

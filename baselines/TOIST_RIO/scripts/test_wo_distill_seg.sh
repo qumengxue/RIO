@@ -1,0 +1,13 @@
+python -m torch.distributed.launch \
+--master_port=23456 \
+--nproc_per_node=4 \
+--use_env main.py \
+--dataset_config configs/tdod_rio.json \
+--valid_batch_size 4  \
+--num_workers 5 \
+--resume logs/wo_distill_seg_resume/BEST_checkpoint.pth \
+--ema \
+--eval \
+--output-dir 'logs/test' \
+--mask_model smallconv \
+--no_contrastive_align_loss
