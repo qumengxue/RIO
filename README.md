@@ -1,7 +1,7 @@
-# RIO Dataset
-This repository is a demo of the RIO common set.
+# 🍸️RIO Dataset
+This is the official repository for RIO dataset, including dataset downloads, maintenance, baseline method implementation and validation. If you find our dataset helpful in your work, please ⭐star and 📖cite our work.
 
-## Example
+## 📌Data Example
 You can follow the steps in example.ipynb to read and visualize some sample ground truth.
 
 Here is a ground truth example from the dataset: 
@@ -12,7 +12,7 @@ The intention description is "you can use the thing to cut the food on the table
 
 More examples are in the file ./examples.
 
-## Data Format
+## 📑Data Format
 The annotation contains: 
 
 ```
@@ -25,13 +25,28 @@ The annotation contains:
 "mask_list": The mask annotations of all instances of the class that can satisfy intention.
 ```
 
-## Baseline Methods
-The baselines in the paper include the following, please refer to the corresponding repositories.
+## 📁Data Download
 
-[MDETR: Modulated Detection for End-to-End Multi-Modal Understanding](https://github.com/ashkamath/mdetr)
+### Image
+Our dataset is constructed based on COCO2014 dataset, you can download them from [MSCOCO](https://cocodataset.org/), our training set images are from COCO [train](http://images.cocodataset.org/zips/train2014.zip) set, the images of common and uncommon test are from COCO [val](http://images.cocodataset.org/zips/val2014.zip) set.
 
-[TOIST: Task Oriented Instance Segmentation Transformer with Noun-Pronoun Distillation](https://github.com/AIR-DISCOVER/TOIST)
+### Annotation
+Comming soon...
 
-[SeqTR: A Simple yet Universal Network for Visual Grounding](https://github.com/sean-zhuh/SeqTR)
+## 🧰Baseline Methods
+We provide checkpoints for the baseline models, and you can follow the environment configuration details of the original repository and our modified code and scripts to verify the performance of these models on the RIO dataset.
+### 1. MDETR & TOIST
+| Model | AP50_Det | Top1_Det | mIoU_Seg | Top1_Seg     |Checkpoint     |
+| -------- | -------- | -------- | -------- |-------- |-------- |
+| MDETR@common     | 48.61     | 65.05     | 44.14     | 54.55     | [Download](https://drive.google.com/file/d/1UyZqR13ojW5xi7C9kfZ-04AM2rsp-Wvn/view?usp=drive_link)    |
+| MDETR@uncommon     | 24.20     | 39.60     | 22.03     | 34.35     | [Download](https://drive.google.com/file/d/1UyZqR13ojW5xi7C9kfZ-04AM2rsp-Wvn/view?usp=drive_link)    |
+| TOIST@common     | 49.05     | 66.72     | 45.07     | 55.85     |[Download](https://drive.google.com/file/d/1aM1AGhONn-4mNas7KkQlUqd1rwBPRNXq/view?usp=drive_link)     |
+| TOIST@uncommon     | 21.96     | 39.28     | 19.41     | 34.00     |[Download](https://drive.google.com/file/d/1aM1AGhONn-4mNas7KkQlUqd1rwBPRNXq/view?usp=drive_link)     |
 
-[PolyFormer: Referring Image Segmentation as Sequential Polygon Generation](https://github.com/amazon-science/polygon-transformer)
+### 2. Polyformer
+| Model | mIoU_common | mIoU_uncommon     |Checkpoint     |
+| -------- | -------- |-------- |-------- |
+| Polyformer     | 46.16     | 26.77     |[Download](https://drive.google.com/file/d/1HmCF_JVLZMvbxVqslfiUj5DgaVj_kXT_/view?usp=drive_link)     |
+
+## 🍞Acknowledgement
+Data loading and inference scripts are built on [MDETR](https://github.com/ashkamath/mdetr), [TOIST](https://github.com/AIR-DISCOVER/TOIST), [SeqTR](https://github.com/sean-zhuh/SeqTR), [PolyFormer](https://github.com/amazon-science/polygon-transformer) repositories.
