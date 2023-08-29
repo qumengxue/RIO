@@ -36,7 +36,12 @@ You can download the latest version of data annotation from [here](https://drive
 ## 🧰Baseline Methods
 We provide checkpoints for the baseline models, and you can follow the environment configuration details of the original repository and our modified code and scripts to verify the performance of these models on the RIO dataset.
 ### 1. MDETR & TOIST
-TOIST is built on top of the MDETR repository, and there is only a difference between distilled (TOIST) and undistilled (MDETR). We've organized the data into the same format, which you can download from [here](https://drive.google.com/drive/folders/1Vc6BGvjmUvlO1vnFRBPfSzXx8onkkFOZ?usp=drive_link) and put into the *data/coco-tasks/annotations/* directory. 
+
+```
+cd baselines/TOIST_RIO
+```
+TOIST is built on top of the MDETR repository, and there is only a difference between distilled (TOIST) and undistilled (MDETR). 
+* We've organized the data into the same format, which you can download from [here](https://drive.google.com/drive/folders/1Vc6BGvjmUvlO1vnFRBPfSzXx8onkkFOZ?usp=drive_link) and put into the *data/coco-tasks/annotations/* directory. 
 
 You can organize the 'data' folder as follows:
 ```
@@ -52,7 +57,7 @@ data/
             └── refcoco_task_train.json
 ```
 
-Download the corresponding model checkpoint and run ```bash scripts/test_wo_distill_seg.sh``` to evaluate MDETR, run ```bash scripts/test_w_distill_seg.sh``` to evaluate TOIST. You can choose to evaluate **"common"** or **"uncommon"** at `refexp_test_set` in ```configs/tdod_rio.json```.
+* Download the corresponding model checkpoint and run ```bash scripts/test_wo_distill_seg.sh``` to evaluate MDETR, run ```bash scripts/test_w_distill_seg.sh``` to evaluate TOIST. You can choose to evaluate **"common"** or **"uncommon"** at `refexp_test_set` in ```configs/tdod_rio.json```.
 
 
 | Model | AP50_Det | Top1_Det | mIoU_Seg | Top1_Seg     |Checkpoint     |
@@ -64,6 +69,28 @@ Download the corresponding model checkpoint and run ```bash scripts/test_wo_dist
 
 
 ### 2. Polyformer
+```
+cd baselines/polygon-transformer
+```
+Please refer to [PolyFormer](https://github.com/amazon-science/polygon-transformer) for environment configuration, including `fairseq` and `refer`.
+
+**Train**
+
+Run scripts after acess `run_scripts/finetune/`.
+```
+cd run_scripts/finetune/
+bash train_polyformer_b_reftask.sh
+```
+
+**Evaluation**
+* Download pre-processed tsv data from [here](https://drive.google.com/drive/folders/1GDsQG8DPrYJ2XyHlkNQKyUhXHj5bXrAi?usp=drive_link) and put into `datasets/finetune/reftask/`.
+* Download our trained model from [here](https://drive.google.com/file/d/1HmCF_JVLZMvbxVqslfiUj5DgaVj_kXT_/view?usp=drive_link).
+* Run scripts after access `run_scripts/evaluation/`.  
+```
+cd run_scripts/evaluation/
+bash evaluate_polyformer_b_reftask.sh
+```
+
 | Model | mIoU_common | mIoU_uncommon     |Checkpoint     |
 | -------- | -------- |-------- |-------- |
 | Polyformer     | 46.16     | 26.77     |[link](https://drive.google.com/file/d/1HmCF_JVLZMvbxVqslfiUj5DgaVj_kXT_/view?usp=drive_link)     |
