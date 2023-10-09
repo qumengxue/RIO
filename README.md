@@ -32,6 +32,7 @@ Our dataset is constructed based on COCO2014 dataset, you can download them from
 
 ### Annotation
 You can download the latest version of data annotation from [here](https://drive.google.com/drive/folders/1IAvh8tBGS3WWgV4SbVoqhwCkmyoSFffh?usp=drive_link).
+The training set will be available soon!
 
 ## 🧰Baseline Methods
 We provide checkpoints for the baseline models, and you can follow the environment configuration details of the original repository and our modified code and scripts to verify the performance of these models on the RIO dataset.
@@ -94,6 +95,10 @@ bash evaluate_polyformer_b_reftask.sh
 | Model | mIoU_common | mIoU_uncommon     |Checkpoint     |
 | -------- | -------- |-------- |-------- |
 | Polyformer     | 46.16     | 26.77     |[link](https://drive.google.com/file/d/1HmCF_JVLZMvbxVqslfiUj5DgaVj_kXT_/view?usp=drive_link)     |
+
+**Demo**
+
+The original repository [PolyFormer](https://github.com/amazon-science/polygon-transformer) updated `demo.py`, with our model weight trained on RIO dataset, you can immediately test intention-oriented segmentation in the demo.
 
 ## 🍞Acknowledgement
 Data loading and inference scripts are built on [MDETR](https://github.com/ashkamath/mdetr), [TOIST](https://github.com/AIR-DISCOVER/TOIST), [SeqTR](https://github.com/sean-zhuh/SeqTR), [PolyFormer](https://github.com/amazon-science/polygon-transformer) repositories.
