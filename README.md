@@ -31,7 +31,7 @@ The annotation contains:
 Our dataset is constructed based on COCO2014 dataset, you can download them from [MSCOCO](https://cocodataset.org/), our training set images are from COCO [train](http://images.cocodataset.org/zips/train2014.zip) set, the images of common and uncommon test are from COCO [val](http://images.cocodataset.org/zips/val2014.zip) set.
 
 ### Annotation
-You can download the latest version of data annotation from [here](https://drive.google.com/drive/folders/1IAvh8tBGS3WWgV4SbVoqhwCkmyoSFffh?usp=drive_link).
+You can download the latest version of data annotation from [here](https://drive.google.com/drive/folders/1xEh9IfmBPksrb7HFcrNOdIdOjbLYjlxV).
 The training set will be available soon!
 
 ## 🧰Baseline Methods
@@ -76,8 +76,8 @@ cd baselines/polygon-transformer
 Please refer to [PolyFormer](https://github.com/amazon-science/polygon-transformer) for environment configuration, including `fairseq` and `refer`.
 
 **Train**
-
-Run scripts after acess `run_scripts/finetune/`.
+* Download pre-processed tsv data of train set from [here](https://www.aliyundrive.com/s/xhMrnbukWVy) and put it into `datasets/finetune/reftask/`.
+* Run scripts after acess `run_scripts/finetune/`.
 ```
 cd run_scripts/finetune/
 bash train_polyformer_b_reftask.sh
