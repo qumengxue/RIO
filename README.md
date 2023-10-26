@@ -32,7 +32,6 @@ Our dataset is constructed based on COCO2014 dataset, you can download them from
 
 ### Annotation
 You can download the latest version of data annotation from [here](https://drive.google.com/drive/folders/1xEh9IfmBPksrb7HFcrNOdIdOjbLYjlxV).
-The training set will be available soon!
 
 ## 🧰Baseline Methods
 We provide checkpoints for the baseline models, and you can follow the environment configuration details of the original repository and our modified code and scripts to verify the performance of these models on the RIO dataset.
