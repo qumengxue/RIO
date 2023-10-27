@@ -1,5 +1,11 @@
-# 🍸️RIO Dataset
-This is the official repository for RIO dataset, including dataset downloads, maintenance, baseline method implementation and validation. If you find our dataset helpful in your work, please ⭐star and 📖cite our work.
+# 🍸️RIO: A Benchmark for Reasoning Intention-Oriented Objects in Open Environments
+This is the official repository for RIO benchmark, including dataset downloads, baseline method implementation and validation. If you find our dataset helpful in your work, please ⭐star and 📖cite our work.
+
+🏡[Project page](https://reasonio.github.io)   🔗[arXiv](https://arxiv.org/pdf/2310.17290.pdf)
+
+## 📝News
+Our work has been accepted by the NeurIPS 2023 d&b track. We will be progressively testing the performance of MLLMs on **RIO**.
+
 
 ## 📌Data Example
 You can follow the steps in example.ipynb to read and visualize some sample ground truth.
