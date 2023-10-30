@@ -37,7 +37,7 @@ The annotation contains:
 Our dataset is constructed based on COCO2014 dataset, you can download them from [MSCOCO](https://cocodataset.org/), our training set images are from COCO [train](http://images.cocodataset.org/zips/train2014.zip) set, the images of common and uncommon test are from COCO [val](http://images.cocodataset.org/zips/val2014.zip) set.
 
 ### Annotation
-You can download the latest version of data annotation from [here](https://drive.google.com/drive/folders/1xEh9IfmBPksrb7HFcrNOdIdOjbLYjlxV).
+You can download the latest version of data annotation from [here](https://drive.google.com/drive/folders/1IAvh8tBGS3WWgV4SbVoqhwCkmyoSFffh?usp=drive_link).
 
 ## 🧰Baseline Methods
 We provide checkpoints for the baseline models, and you can follow the environment configuration details of the original repository and our modified code and scripts to verify the performance of these models on the RIO dataset.
